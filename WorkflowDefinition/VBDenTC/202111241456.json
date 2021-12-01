@@ -591,8 +591,7 @@
 					"IsChild": false,
 					"ChildWorkflowID": null,
 					"AllowRefuse": false,
-					"IsWorkQueue": false,
-					"CheckExists": false,
+					"IsWorkQueue": true,
 					"RefuseType": 0,
 					"Roles": [
 						2
@@ -790,7 +789,7 @@
 							"Description": null,
 							"FinishTask": true,
 							"FinishTodo": false,
-							"TransactionID": 4,
+							"TransactionID": 6,
 							"CollectInfos": null,
 							"Roles": [
 								2
@@ -1046,8 +1045,7 @@
 					"IsChild": false,
 					"ChildWorkflowID": null,
 					"AllowRefuse": false,
-					"IsWorkQueue": false,
-					"CheckExists": false,
+					"IsWorkQueue": true,
 					"RefuseType": 0,
 					"Roles": [
 						3

@@ -98,7 +98,6 @@
 					"IsChild": false,
 					"ChildWorkflowID": null,
 					"IsWorkQueue": true,
-					"QueueType": 2,
 					"AllowRefuse": true,
 					"RefuseType": 2,
 					"DefaultRole": 3,
@@ -450,7 +449,7 @@
 							]
 						},
 						{
-							"ID": 983,
+							"ID": 2,
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,

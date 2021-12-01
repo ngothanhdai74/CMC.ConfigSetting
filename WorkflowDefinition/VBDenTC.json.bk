@@ -592,7 +592,6 @@
 					"ChildWorkflowID": null,
 					"AllowRefuse": false,
 					"IsWorkQueue": false,
-					"CheckExists": false,
 					"RefuseType": 0,
 					"Roles": [
 						2
@@ -790,7 +789,7 @@
 							"Description": null,
 							"FinishTask": true,
 							"FinishTodo": false,
-							"TransactionID": 4,
+							"TransactionID": 9,
 							"CollectInfos": null,
 							"Roles": [
 								2
@@ -1047,7 +1046,6 @@
 					"ChildWorkflowID": null,
 					"AllowRefuse": false,
 					"IsWorkQueue": false,
-					"CheckExists": false,
 					"RefuseType": 0,
 					"Roles": [
 						3
@@ -1791,6 +1789,17 @@
 					"Description": null,
 					"FromActivityID": 5,
 					"ToActivityID": 6,
+					"AllowRecall": false
+				}
+				,
+				{
+					"ID": 9,
+					"WorkflowID": null,
+					"VersionID": 0,
+					"Name": "Chuyển Đơn vị",
+					"Description": null,
+					"FromActivityID": 2,
+					"ToActivityID": 5,
 					"AllowRecall": false
 				}
 			]

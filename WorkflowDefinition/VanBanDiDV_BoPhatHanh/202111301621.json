@@ -258,13 +258,29 @@
 								{
 									"ID": 0,
 									"SeqNo": 99,
-									"Type": 5,
+									"Type": 8,
 									"Action": {
-										"Mode": 0,
+										"ItemType": 5,
 										"Props": [
 											{
+												"Code": "QueueName",
+												"Value": "const:CMC.TS.EDOC.MSG.OUTBOX.TASK"
+											},
+											{
 												"Code": "State",
-												"Value": "17"
+												"Value": "const:1"
+											},
+											{
+												"Code": "Organ",
+												"Value": "var:Org"
+											},
+											{
+												"Code": "Staff",
+												"Value": "var:Roles"
+											},
+											{
+												"Code": "MsgType",
+												"Value": "const:0"
 											}
 										]
 									}

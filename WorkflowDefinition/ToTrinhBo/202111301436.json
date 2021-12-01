@@ -133,20 +133,6 @@
 											}
 										]
 									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 99,
-									"Type": 5,
-									"Action": {
-										"Mode": 0,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": 1
-											}
-										]
-									}
 								}
 							]
 						},

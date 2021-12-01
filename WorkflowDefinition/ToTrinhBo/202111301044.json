@@ -122,6 +122,44 @@
 							"Steps": [
 								{
 									"ID": 0,
+									"SeqNo": 0,
+									"Type": 8,
+									"Action": {
+										"ItemType": 6,
+										"Props": [
+											{
+												"Code": "QueueName",
+												"Value": "const:CMC.TS.EDOC.MSG.OUTBOX.DOC"
+											},
+											{
+												"Code": "Organ",
+												"Value": "var:Org"
+											},
+											{
+												"Code": "Staff",
+												"Value": "var:Roles"
+											},
+											{
+												"Code": "MsgType",
+												"Value": "const:1"
+											},
+											{
+												"Code": "StatusCode",
+												"Value": "const:7"
+											},
+											{
+												"Code": "StatusValue",
+												"Value": "const:Đang xử lý"
+											},
+											{
+												"Code": "DocType",
+												"Value": "const:103"
+											}
+										]
+									}
+								},
+								{
+									"ID": 0,
 									"SeqNo": 19999,
 									"Type": 9,
 									"Action": {
@@ -130,20 +168,6 @@
 											{
 												"Code": "State",
 												"Value": "15"
-											}
-										]
-									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 99,
-									"Type": 5,
-									"Action": {
-										"Mode": 0,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": 1
 											}
 										]
 									}
@@ -1112,20 +1136,6 @@
 											}
 										]
 									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 99,
-									"Type": 5,
-									"Action": {
-										"Mode": 1,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": 21
-											}
-										]
-									}
 								}
 							]
 						}
@@ -1231,6 +1241,16 @@
 					"Description": null,
 					"FromActivityID": 1,
 					"ToActivityID": 6,
+					"AllowRecall": false
+				},
+				{
+					"ID": 13,
+					"WorkflowID": null,
+					"VersionID": 0,
+					"Name": "Chuyển thư ký",
+					"Description": null,
+					"FromActivityID": 8,
+					"ToActivityID": 7,
 					"AllowRecall": false
 				},
 				{

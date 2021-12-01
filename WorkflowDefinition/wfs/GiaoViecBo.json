@@ -50,7 +50,7 @@
 					"ID": 1,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC",
+					"Name": "Lãnh đạo Bộ",
 					"Description": null,
 					"SeqNo": 0
 				},
@@ -58,7 +58,7 @@
 					"ID": 2,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo đơn vị",
+					"Name": "Văn thư đơn vị",
 					"Description": null,
 					"SeqNo": 0
 				},
@@ -66,7 +66,7 @@
 					"ID": 3,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Thư ký Lãnh đạo TC",
+					"Name": "Thư ký Lãnh Đạo Bộ",
 					"Description": null,
 					"SeqNo": 0
 				},

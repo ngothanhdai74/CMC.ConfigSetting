@@ -1,8 +1,8 @@
 {
 	"ID": "ToTrinhBo",
 	"Name": "ToTrinhBo",
-	"Title": "Tờ trình TC",
-	"Description": "Quy trình xử lý Tờ trình TC",
+	"Title": "Tờ trình Bộ",
+	"Description": "Quy trình xử lý Tờ trình Bộ",
 	"Version": 1,
 	"MaxVersion": 1,
 	"Status": 1,
@@ -32,7 +32,7 @@
 					"ID": 2,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC phê duyệt",
+					"Name": "Lãnh đạo Bộ phê duyệt",
 					"Description": null,
 					"Percent": 0
 				},
@@ -40,7 +40,7 @@
 					"ID": 3,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Xin ý kiến Lãnh đạo TC khác",
+					"Name": "Xin ý kiến Lãnh đạo Bộ khác",
 					"Description": null,
 					"Percent": 0
 				},
@@ -48,7 +48,7 @@
 					"ID": 4,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Chuyển Lãnh đạo TC khác",
+					"Name": "Chuyển Lãnh đạo Bộ khác",
 					"Description": null,
 					"Percent": 0
 				},
@@ -74,15 +74,7 @@
 					"ID": 2,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC",
-					"Description": null,
-					"SeqNo": 0
-				},
-				{
-					"ID": 3,
-					"WorkflowID": null,
-					"VersionID": 0,
-					"Name": "Lãnh đạo VP",
+					"Name": "Lãnh đạo Bộ",
 					"Description": null,
 					"SeqNo": 0
 				}
@@ -111,7 +103,7 @@
 							"VersionID": 0,
 							"ActivityID": 0,
 							"AutoFoward": true,
-							"Name": "Trình Lãnh đạo TC",
+							"Name": "Trình Lãnh đạo Bộ",
 							"Description": null,
 							"FinishTask": true,
 							"TransactionID": 1,
@@ -122,28 +114,38 @@
 							"Steps": [
 								{
 									"ID": 0,
-									"SeqNo": 19999,
-									"Type": 9,
+									"SeqNo": 0,
+									"Type": 8,
 									"Action": {
-										"IsCurrent": true,
+										"ItemType": 6,
 										"Props": [
 											{
-												"Code": "State",
-												"Value": "15"
-											}
-										]
-									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 99,
-									"Type": 5,
-									"Action": {
-										"Mode": 0,
-										"Props": [
+												"Code": "QueueName",
+												"Value": "const:CMC.TS.EDOC.MSG.OUTBOX.DOC"
+											},
 											{
-												"Code": "State",
-												"Value": 1
+												"Code": "Organ",
+												"Value": "var:Org"
+											},
+											{
+												"Code": "Staff",
+												"Value": "var:Roles"
+											},
+											{
+												"Code": "MsgType",
+												"Value": "const:1"
+											},
+											{
+												"Code": "StatusCode",
+												"Value": "const:7"
+											},
+											{
+												"Code": "StatusValue",
+												"Value": "const:Đang xử lý"
+											},
+											{
+												"Code": "DocType",
+												"Value": "const:103"
 											}
 										]
 									}
@@ -238,15 +240,15 @@
 							]
 						},
 						{
-							"ID": 983,
+							"ID": 3,
+							"Type": 1,
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,
-							"AutoFoward": false,
-							"Name": "Trình LĐ văn phòng",
+							"Name": "Phê duyệt",
 							"Description": null,
 							"FinishTask": true,
-							"TransactionID": 15,
+							"TransactionID": 0,
 							"CollectInfos": [],
 							"Roles": [
 								1
@@ -254,14 +256,18 @@
 							"Steps": [
 								{
 									"ID": 0,
-									"SeqNo": 19999,
-									"Type": 9,
+									"SeqNo": 99,
+									"Type": 12,
 									"Action": {
-										"IsCurrent": true,
+										"IsParent": true,
 										"Props": [
 											{
-												"Code": "State",
-												"Value": "19"
+												"Code": "DoAction",
+												"Value": "2"
+											},
+											{
+												"Code": "SumissionStatus",
+												"Value": "1"
 											}
 										]
 									}
@@ -274,7 +280,7 @@
 					"ID": 2,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC xử lý",
+					"Name": "Lãnh đạo Bộ xử lý",
 					"Type": 1,
 					"Description": null,
 					"IsWorkQueue": true,
@@ -291,7 +297,7 @@
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,
-							"Name": "Xin ý kiến Lãnh đạo TC khác",
+							"Name": "Xin ý kiến Lãnh đạo Bộ khác",
 							"Description": null,
 							"FinishTask": false,
 							"TransactionID": 4,
@@ -321,7 +327,7 @@
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,
-							"Name": "Chuyển Lãnh đạo TC khác",
+							"Name": "Chuyển Lãnh đạo Bộ khác",
 							"Description": null,
 							"FinishTask": true,
 							"TransactionID": 5,
@@ -700,7 +706,7 @@
 					"ID": 3,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC cho ý kiến",
+					"Name": "Lãnh đạo Bộ cho ý kiến",
 					"Type": 1,
 					"Description": null,
 					"IsChild": true,
@@ -718,7 +724,7 @@
 					"ID": 4,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo TC chuyển xử lý",
+					"Name": "Lãnh đạo Bộ chuyển xử lý",
 					"Type": 1,
 					"Description": null,
 					"IsChild": true,
@@ -759,7 +765,6 @@
 					"IsChild": false,
 					"ChildWorkflowID": null,
 					"IsWorkQueue": true,
-					"QueueType": 2,
 					"AllowRefuse": false,
 					"RefuseType": 0,
 					"Roles": [
@@ -772,7 +777,7 @@
 							"VersionID": 0,
 							"ActivityID": 0,
 							"AutoFoward": true,
-							"Name": "Trình Lãnh đạo TC",
+							"Name": "Trình Lãnh đạo Bộ",
 							"Description": null,
 							"FinishTask": true,
 							"TransactionID": 11,
@@ -787,7 +792,7 @@
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,
-							"Name": "Xin ý kiến Lãnh đạo TC khác",
+							"Name": "Xin ý kiến Lãnh đạo Bộ khác",
 							"Description": null,
 							"FinishTask": false,
 							"TransactionID": 2,
@@ -817,7 +822,7 @@
 							"WorkflowID": null,
 							"VersionID": 0,
 							"ActivityID": 0,
-							"Name": "Chuyển Lãnh đạo TC khác",
+							"Name": "Chuyển Lãnh đạo Bộ khác",
 							"Description": null,
 							"FinishTask": true,
 							"TransactionID": 3,
@@ -1053,83 +1058,6 @@
 							]
 						}
 					]
-				},
-				{
-					"ID": 8,
-					"WorkflowID": null,
-					"VersionID": 1,
-					"Name": "Lãnh đạo VP xử lý",
-					"Type": 1,
-					"Description": null,
-					"IsChild": false,
-					"ChildWorkflowID": null,
-					"IsWorkQueue": true,
-					"QueueType": 1,
-					"AllowRefuse": false,
-					"RefuseType": 0,
-					"Roles": [
-						3
-					],
-					"Actions": [
-						{
-							"ID": 992,
-							"WorkflowID": null,
-							"VersionID": 0,
-							"ActivityID": 0,
-							"Name": "Trả lại thư ký",
-							"Description": null,
-							"FinishTask": true,
-							"TransactionID": null,
-							"CollectInfos": [],
-							"Roles": [
-								3
-							],
-							"Steps": [
-								{
-									"ID": 0,
-									"SeqNo": 0,
-									"Type": 13,
-									"Action": {
-										"Mode": 0,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": "21"
-											}
-										]
-									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 0,
-									"Type": 9,
-									"Action": {
-										"IsCurrent": true,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": "21"
-											}
-										]
-									}
-								},
-								{
-									"ID": 0,
-									"SeqNo": 99,
-									"Type": 5,
-									"Action": {
-										"Mode": 1,
-										"Props": [
-											{
-												"Code": "State",
-												"Value": 21
-											}
-										]
-									}
-								}
-							]
-						}
-					]
 				}
 			],
 			"Transactions": [
@@ -1157,7 +1085,7 @@
 					"ID": 3,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Thư ký chuyển Lãnh đạo TC khác xử lý",
+					"Name": "Thư ký chuyển Lãnh đạo Bộ khác xử lý",
 					"Description": null,
 					"FromActivityID": 7,
 					"ToActivityID": 4,
@@ -1177,7 +1105,7 @@
 					"ID": 5,
 					"WorkflowID": null,
 					"VersionID": 0,
-					"Name": "Lãnh đạo chuyển Lãnh đạo TC khác xử lý",
+					"Name": "Lãnh đạo chuyển Lãnh đạo Bộ khác xử lý",
 					"Description": null,
 					"FromActivityID": 2,
 					"ToActivityID": 4,
@@ -1231,16 +1159,6 @@
 					"Description": null,
 					"FromActivityID": 1,
 					"ToActivityID": 6,
-					"AllowRecall": false
-				},
-				{
-					"ID": 15,
-					"WorkflowID": null,
-					"VersionID": 0,
-					"Name": "Chuyển LĐ văn phòng",
-					"Description": null,
-					"FromActivityID": 1,
-					"ToActivityID": 8,
 					"AllowRecall": false
 				}
 			]
